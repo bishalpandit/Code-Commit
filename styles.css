@@ -11,34 +11,114 @@ body {
 
 /* Navbar */
 nav {
-    border-radius: 5px;
+    border-radius: 0;
     height: 5rem;
-    background-color: rgb(145, 107, 191,0.89); 
+    background-color: rgb(0, 0, 0,0.9); 
     color: #fff;
 }
+
 
 .navbar-nav a {
     text-decoration: none;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
-    margin-left: 3.5rem;
     font-weight: 550;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 5.5rem;
+    padding-left: 5.5rem;
+}
+
+nav{
+    padding: 0 5px 0 5px;
+}
+
+.nav-link{
+    padding: 23px 5.5rem 23px 5.5rem;
+}
+
+.navbar-nav{
+    height: 5em;
+    padding: 1px;
+}
+
+
+.navbar-nav a:hover:not(:focus){
+    color: #fbff00;
+}
+
+nav a{
+    position: relative;
+    padding-top: 15px;
+    margin: -1px;
+    display: block;
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height:2px;
+    background-color: #fbff00;
+    top: 2.5em;
+    left:30%;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+nav a:hover:not(:focus):after{
+    width:40%;
+}
+nav a:focus{
+    background-color: #fbff00;
+    color: #000000;
 }
 
 .btn {
     -webkit-border-radius: 16;
     -moz-border-radius: 16;
-    border-radius: 16px;
-    font-family: Arial;
-    color: #000;
-    font-size: 20px;
-    background: #fff;
-    padding: 9px 28px 9px 28px;
-    text-decoration: none;
-    margin-right: 3rem;
-  }
+    border-radius: 50px;
+    display: inline;
+    width: 170px;
+    height: 50px;
+    border: solid 2px #fbff00;
+    color: #fbff00;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    font-size: larger;
+}
   
+.btn::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:0%;
+    height: 100%;
+    transition: 0.2s linear;
+    z-index: -1;
+}    
+
+.btn:hover{
+    color: #000000;
+    transition: 0.2s linear;
+}
+.btn:hover::before{
+    width:100%;
+    border-radius: 50px;
+    background-color: #fbff00;
+    border: #fbff00;
+}
+
+.btn1{
+    margin-left: 10rem;
+}
+.btn2{
+    margin-left: -7rem;
+}
 /* Content  */
 
  .content {
@@ -56,4 +136,13 @@ nav {
     left: 13%;
     width: 300px;
     line-height: 4.5rem;
+}
+.vertical_cmd {
+    border: solid rgb(251, 255, 0) 1px;
+    height: 45px;
+    justify-content: center;
+    position: relative;
+    top: 6px;
+    height: 4em;
+    opacity: 0.3;
 }
