@@ -113,12 +113,6 @@ nav a:focus{
     border: #fbff00;
 }
 
-.btn1{
-    margin-left: 10rem;
-}
-.btn2{
-    margin-left: -7rem;
-}
 /* Content  */
 
  .content {
@@ -145,4 +139,31 @@ nav a:focus{
     top: 6px;
     height: 4em;
     opacity: 0.3;
+}
+
+@media only screen and (max-width:1100px){
+    .btn{
+        margin: 10px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-right: 3.5rem;
+        padding-left: 3.5rem;
+    }
+}
+@media only screen and (max-width:992px){
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        z-index: 2;
+    }
+    .navbar navbar-expand-lg{
+        z-index: -2;
+        float: left;
+    }
+    .navbar navbar-expand-lg{
+        float: left;
+    }
+    .content{
+        clear: left;
+    }
 }
