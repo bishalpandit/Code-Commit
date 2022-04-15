@@ -24,7 +24,7 @@ You will be having a branch of your name in the original repository under which 
 
 * Fork the ``Code Commit`` repository to your Github(After which, you'll see the same in your list of repositories).
 
-* Clone the repository to your PC using command ```git clone ```
+* Clone the repository to your PC using command ```git clone git@github.com:bishalpandit/Code-Commit.git```
 
 * Start working on the template on your **branch only** and make sure you add commits at intermediate steps to keep track of your changes.
 
@@ -37,3 +37,4 @@ You will be having a branch of your name in the original repository under which 
 
 ### 1. How to switch to my branch?
     Use git checkout <Branchname> to change working branch.
+    i.e. git checkout debopriyadey
