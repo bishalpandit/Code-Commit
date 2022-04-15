@@ -9,31 +9,89 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Landy Explora</title>
+    <script>
+        function act1(){
+            document.getElementById('water_ride_para').textContent="A water park or water world is an amusement park that features water play areas such as swimming pools, water slides, splash pads, water playgrounds, and lazy rivers, as well as areas for floating, bathing, swimming, and other barefoot environments.";
+            document.getElementById('water_ride_para').style.display="block";
+            document.getElementById('waterride_id').style.display="none";
+        }
+        function rev_act1(){
+            document.getElementById('water_ride_para').style.display="none";
+            document.getElementById('waterride_id').style.display="block";
+        }
+        function act2(){
+            document.getElementById('roller_para').textContent="Roller coaster, elevated railway with steep inclines and descents that carries a train of passengers through sharp curves and sudden changes of speed and direction for a brief thrill ride. Found mostly in amusement parks as a continuous loop, it is a popular leisure activity.";
+            document.getElementById('roller_para').style.display="block";
+            document.getElementById('roller_id').style.display="none";
+        }
+        function rev_act2(){
+            document.getElementById('roller_para').style.display="none";
+            document.getElementById('roller_id').style.display="block";
+        }
+        function act3(){
+            document.getElementById('wheel_para').textContent="An amusement ride consisting of a large upright wheel rotating on a fixed stand and having seats around its rim suspended freely so that they remain right side up as they revolve";
+            document.getElementById('wheel_para').style.display="block";
+            document.getElementById('wheel_id').style.display="none";
+        }
+        function rev_act3(){
+            document.getElementById('wheel_para').style.display="none";
+            document.getElementById('wheel_id').style.display="block";
+        }
+    </script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="navbar-nav">
-                <a class="nav-link active" href="#">Home</a>
-                <p class="vertical_cmd"></p>
-                <a class="nav-link" href="#">Rides</a>
-                <p class="vertical_cmd"></p>
-                <a class="nav-link" href="#">About</a>
-                <p class="vertical_cmd"></p>
-                <a class="nav-link" href="#">FAQ</a>
-                <p class="vertical_cmd"></p>
+    <div class="main_home">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="#">Home</a>
+                    <p class="vertical_cmd"></p>
+                    <a class="nav-link" href="#for_rides">Rides</a>
+                    <p class="vertical_cmd"></p>
+                    <a class="nav-link" href="#">About</a>
+                    <p class="vertical_cmd"></p>
+                    <a class="nav-link" href="#">FAQ</a>
+                    <p class="vertical_cmd"></p>
+                </div>
+                <button class="btn">Sign up</button>
             </div>
-            <button class="btn">Sign up</button>
+        </nav>
+
+        <!-- Content  -->
+        <div class="content">
+            <div><h3>Explore Excited Rides and Adventures</h3></div>
+            <img src="assets/blob.svg" class="blob" height="450px" width="600px" alt="">
         </div>
-    </nav>
-    <!-- Content  -->
-    <div class="content">
-        <div><h3>Explore Excited Rides and Adventures</h3></div>
-        <img src="assets/blob.svg" class="blob" height="450px" width="600px" alt="">
     </div>
-
+    
+    <!--Rides-->
+    <div class="background_img_ride">
+        <section id="for_rides">
+            <div class="rides_heading">
+                Explore the Rides
+                <hr>
+            </div>
+            <p>Explore exciting rides and enjoy. Assure your safety.</p>
+            <div class="rideContent">
+                <div class="waterride">
+                    <img src="assets/water ride.jpg" alt="Water Ride Image" id="waterride_id" onmousedown="act1()">
+                    <span>Water rides</span><hr>
+                    <p id="water_ride_para" onmousedown="rev_act1()"></p>
+                </div>
+                <div class="roller">
+                    <img src="assets/roller coaster.jpg" alt="Roller Coaster Image" id="roller_id" onmousedown="act2()">
+                    <span>Roller coaster</span><hr>
+                    <p id="roller_para" onmousedown="rev_act2()"></p>
+                </div>
+                <div class="wheel"> 
+                    <img src="assets/ferris wheel.jpg" alt="Ferris Wheel" id="wheel_id" onmousedown="act3()">
+                    <span>Ferris Wheel</span><hr>
+                    <p id="wheel_para" onmousedown="rev_act3()"></p>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
-
 </html>

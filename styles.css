@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Background Image  */
-body {
+.main_home {
     background-image: url('assets/back.jpg');
-    height: 100vh;
-    background-repeat: no-repeat;
+    height: 120vh;
     background-size: cover;
     background-position: center center;
 }
@@ -166,4 +165,81 @@ nav a:focus{
     .content{
         clear: left;
     }
+}
+
+/*rides*/
+
+.background_img_ride{
+    background-image: url('assets/ride_img.jpg');
+    height:auto;
+    width:auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#for_rides{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+}
+
+.rides_heading {
+    margin-top: 0vh;
+    color: #fbff00;
+    font-size: xxx-large;
+    padding-top: 3rem;
+    letter-spacing: 2px;
+    font-style: normal;
+    font-weight: bolder;
+}
+.rides_heading hr {
+    width: 38vw;
+    height: 3px;
+    border-radius: 2px;
+    margin-left: 30vw;
+    opacity: 1;
+}
+#for_rides p{
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+.waterride{
+    display: inline-block;
+    float: left;
+    margin-left: 35px;
+    width: 18em;
+}
+.roller{
+    display: inline-block;
+    clear: both;
+    width: 18em;
+}
+.wheel{
+    display: inline-block;
+    float: right;
+    margin-right: 35px;
+    width: 18em;
+}
+.rideContent img{
+    width: 16em;
+    height: 13em;
+    transition: 0.2s ease;
+}
+.rideContent img:hover{
+    transform: scale(1.05,1.05);
+}
+.rideContent span {
+    font-size: large;
+    letter-spacing: 10px;
+}
+.rideContent>hr{
+    margin: none;
+    width: 23em;
 }
