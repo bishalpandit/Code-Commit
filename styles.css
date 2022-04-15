@@ -9,44 +9,104 @@ body {
     background-position: center center;
 }
 
-/* Navbar */
-nav {
-    border-radius: 5px;
-    height: 5rem;
-    background-color: rgb(145, 107, 191,0.89); 
-    color: #fff;
+.navbar{
+    width:80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
-.navbar-nav a {
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+.navbar ul li a{
     text-decoration: none;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-    margin-left: 3.5rem;
-    font-weight: 550;
+    text-transform: uppercase;
+    font-size:26px; 
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0px;
+    background: #03ee22;
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.cont{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.cont h1{
+    font-size: 50px;
+    margin-top: 80px;
+
+}
+.cont p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 35px;
+}
+button{
+    width:200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bolder;
+    border: 2px solid #faf616;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #faf616;
+    height: 100%;
+    width:0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+z-index: -1;
+transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border:none;
 }
 
-.btn {
-    -webkit-border-radius: 16;
-    -moz-border-radius: 16;
-    border-radius: 16px;
-    font-family: Arial;
-    color: #000;
-    font-size: 20px;
-    background: #fff;
-    padding: 9px 28px 9px 28px;
-    text-decoration: none;
-    margin-right: 3rem;
-  }
-  
+
 /* Content  */
 
- .content {
+ .con {
     margin: 2rem 0 0 3rem;
     position: relative;
 } 
 
-.content h3 {
+.con h2 {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 3.3rem;
