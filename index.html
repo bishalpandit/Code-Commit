@@ -8,28 +8,273 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <title>Landy</title>
+    <title>Rides</title>
+    <script>let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.navbar');
+        
+        menu.onclick = () =>{
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+        
+        window.onscroll = () =>{
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }</script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="navbar-nav">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Rides</a>
-                <a class="nav-link" href="#">About</a>
-                <a class="nav-link" href="#">FAQ</a>
-            </div>
-            <button class="btn">Sign up</button>
-        </div>
-    </nav>
-    <!-- Content  -->
-    <div class="content">
-        <div><h3>Explore Excited Rides and Adventures</h3></div>
-        <img src="assets/blob.svg" class="blob" height="450px" width="600px" alt="">
-    </div>
 
+
+
+
+
+
+    
+    <header class="header">
+    <!-- <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> medcare. </a> -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- <div class="container-fluid">
+            <div class="navbar-nav"> -->
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#doctors">Rides</a>
+                <a class="nav-link" href="#book">Book Online tickets</a>
+                <a class="nav-link" href="#review">Review</a>
+                
+            <!-- </div> -->
+            <button class="btns">Sign up</button>   
+        <!-- </div> -->
+    </nav>
+    <!-- <button class="btns">Sign up</button> -->
+    <div id="menu-btn" class="fas fa-bars">Click here and enjoy Rides</div>
+
+</header>
+   <!-- content -->
+    <section class="home" id="home">
+        
+        <div class="image">
+            <img src="assets/home-img.svg" alt="">
+        </div>
+    
+        <div class="content">
+            <h3>WELCOME TO CaMRIco Rides</h3>
+            <p>Life Best MEMORIES Are Made Here,Enjoy AWESOME Rides</p>
+            <a href="#footer" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
+        </div>
+         </section>
+
+    <div class="log">
+        <h1> Login </h1>
+        
+        <p1>User Name</p1>
+        <input type="text" name="user" placeholder="User Name">
+    
+        <p2>Password</p2> 
+        <input type="password" name="password" placeholder="Password">
+        <button type="sumbit">Login</button>
+    </div>
+    <!-- home section ends -->
+    
+    <!-- icons section starts  -->
+    
+  
+    
+    <!-- icons section ends -->
+    
+    <!-- services section starts  -->
+    
+    <section class="services" id="services">
+        
+        <h1 class="heading"> Don't know Which Rides Place to Go / No time to have To BOOK tickets / Confused about YOUR Rides To Choose<span> ,'all' Answer Here</span> </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>For Online Tickets Book
+                </h3>
+                <!-- <p>Here you can free checkup by showing your health id cards.</p> -->
+                <a href="#book" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3>TO KNOW about our best Rides Place</h3>
+                <!-- <p>call us anytime,We are always ready to help you.</p> -->
+                <a href="#about" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>Best Rides To Choose</h3>
+                <!-- <p>our doctors are from all over india.</p> -->
+                <a href="#doctors" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            
+        </div>
+    
+    </section>
+    
+    <!-- services section ends -->
+    
+    <!-- about section starts  -->
+    
+    <section class="about" id="about">
+    
+        <h1 class="heading"> <span>about</span> us </h1>
+    
+        <div class="row">
+    
+            <div class="image">
+                <img src="assets/aboutus.jpeg" alt="">
+            </div>
+    
+            <div class="content">
+                <h3>This is the best Rides Place in the world</h3>
+                <!-- <p>we provide best class healthcare,we are going to change entire healthcare system.</p> -->
+                <p>Join us now</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+        </div>
+    
+    </section>
+    
+    <!-- about section ends -->
+    
+    <!-- doctors section starts  -->
+    
+    <section class="doctors" id="doctors">
+    
+        <h1 class="heading">Some Of  the Excitng Rides<span></span> </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <img src="assets/TRANSFORMERST.webp" alt="">
+                <h3>TRANSFORMERST SCI-FIC</h3>
+                <button class="Buy">Book Now</span>
+                
+            </div>
+    
+            <div class="box">
+                <img src="assets/Soarinaroundthew.webp" alt="">
+                <h3>Soar Around The World</h3>
+                <button class="Buy Now">Book Now</span>
+                
+            </div>
+    
+            <div class="box">
+                <img src="assets/Indiana-Jones.webp" alt="">
+                <h3>Adventure With Indiana Jones</h3>
+                <button class="Buy">Book Now</span>
+               
+            </div>
+    
+            <div class="box">
+                <img src="assets/Spider-Man.webp" alt="">
+                <h3>Experience the Amazing Adventure of Spider-Man</h3>
+                <button class="Buy">Book Now</span>
+               
+            </div>
+    
+            
+    
+        </div>
+    
+    </section>
+    
+    <!-- doctors section ends -->
+    
+    <!-- booking section starts   -->
+    
+    <section class="book" id="book">
+    
+        <h1 class="heading"> <span>Buy Tickets To </span> Book now </h1>    
+    
+        <div class="row">
+    
+            <div class="image">
+                <img src="assets/booknow.jpg" alt="">
+            </div>
+    
+            <form action="">
+                <h3>Hurry!!!,Book Tickets</h3>
+                <input type="text" placeholder="Rides name" class="box">
+                <input type="number" placeholder="Your number" class="box">
+                <input type="address" placeholder="Number of Tickets" class="box">
+                <!-- <input type="text" class?="box"> -->
+                <input type="submit" value="book now" class="btn">
+            </form>
+    
+        </div>
+    
+    </section>
+    
+    <!-- booking section ends -->
+    
+    <!-- review section starts  -->
+    
+    <section class="review" id="review">
+        
+        <h1 class="heading">Review of <span>CaMRIco Rides</span> </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <img src="assets/Bikram.jpg" alt="">
+                <h3>Bikram Das</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">Awesome! Their n-numbers of Rides.Really!,This place is making exciting MEMORIES, I would highly recommend CaMRIco Rides</p>
+            </div>
+    
+            <div class="box">
+                <img src="assets/Shyam Singh.jpg" alt="">
+                <h3>Shyam Sundar Singh</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">I don't generally write reviews,but CaMRIco Rides is an exception.I often visit here with my friends and family</p>
+            </div>
+    
+            
+    
+        </div>
+    
+    </section>
+    
+    <!-- review section ends -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
