@@ -11,13 +11,13 @@
     <title>Landy</title>
 </head>
 
-<body>
+<body style="scroll-behavior: unset;">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="navbar-nav">
                 <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Rides</a>
+                <a class="nav-link" href="#rides">Rides</a>
                 <a class="nav-link" href="#">About</a>
                 <a class="nav-link" href="#">FAQ</a>
             </div>
@@ -25,11 +25,31 @@
         </div>
     </nav>
     <!-- Content  -->
-    <div class="content">
-        <div><h3>Explore Excited Rides and Adventures</h3></div>
-        <img src="assets/blob.svg" class="blob" height="450px" width="600px" alt="">
+    <div class="masterContainer">
+        <div class="content">
+            <div><h3>Explore Excited Rides and Adventures</h3></div>
+            <img src="assets/blob.svg" class="blob" height="450px" width="600px" alt="" >
+        </div>
+        <!-- Rides -->
+        <section id="rides">
+            <h3>Enjoy the best rides in the world</h3>
+            <ul id="ridesitems">
+                <li><img class="rideimages" src="assets/ride1.jpg" alt="">
+                <!-- Image Reference: https://www.pexels.com/photo/people-riding-on-bump-cars-4123545/ -->
+                <p>The Exciting Bumper Cars</p></li>
+                <li><img class="rideimages" src="assets/ride2.jpg" alt="">
+				<!--Image Reference: https://unsplash.com/photos/Ms6GKIS94Yc -->
+                    <p>The Thrilling Roller Coster</p></li>
+                <li><img class="rideimages" src="assets/ride3.jpg" alt="">
+				<!-- Image Reference: https://unsplash.com/photos/pi_Ju6KoQIc -->
+                    <p>The Big Wheel</p></li>
+            </ul>
+        </section>
+
+        <!-- About Us -->
+        
     </div>
-
+    
 </body>
-
+<script src="script.js"></script>
 </html>
