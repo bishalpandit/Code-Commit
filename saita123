@@ -1,0 +1,9 @@
+<html>
+<body bgcolor="pink">
+<h2>SIGN UP INFORMATION </h2>
+<p>Name:<input type="text" name="name" required></p>
+<p>Email Address:<input type="text" name="email" id="email"  required></p>
+<p>Contact Number:<input type="number" name="contact"></p>
+<p><input type="submit"></p>
+</body>
+</html>
