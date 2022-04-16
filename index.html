@@ -37,6 +37,18 @@
             document.getElementById('wheel_para').style.display="none";
             document.getElementById('wheel_id').style.display="block";
         }
+        window.onscroll=function (){scrollFunction()};
+        function scrollFunction(){
+            if(document.body.scrollTop>200||document.documentElement.scrollTop>200){
+                document.getElementById("myBtn").style.display="block";
+            }else{
+                document.getElementById("myBtn").style.display="none";
+            }
+        }
+        function topFunction(){
+            document.body.scrollTop=0;
+            document.documentElement.scrollTop=0;
+        }
     </script>
 </head>
 
@@ -46,11 +58,11 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="#cont">Home</a>
                     <p class="vertical_cmd"></p>
                     <a class="nav-link" href="#for_rides">Rides</a>
                     <p class="vertical_cmd"></p>
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#for_about">About</a>
                     <p class="vertical_cmd"></p>
                     <a class="nav-link" href="#">FAQ</a>
                     <p class="vertical_cmd"></p>
@@ -60,7 +72,7 @@
         </nav>
 
         <!-- Content  -->
-        <div class="content">
+        <div class="content" id="cont">
             <div><h3>Explore Excited Rides and Adventures</h3></div>
             <img src="assets/blob.svg" class="blob" height="450px" width="600px" alt="">
         </div>
@@ -93,5 +105,33 @@
             </div>
         </section>
     </div>
+
+    <!--About-->
+    <footer class="">
+        <div class="">
+            <section id="for_about">
+                <div class="about_heading">
+                    About
+                    <hr>
+                    <div class="about_details">
+                        <p>A theme park or an amusement park is a place with attractions made up of rides, such as roller coasters and water rides. They usually contain a selection of different types of rides, along with shops, restaurants and other entertainment outlets.</p>
+                    </div>
+                </div>
+                <div class="contact_heading">
+                    Contact
+                    <hr>
+                    <div class="contact_details">
+                        <p>MCKV Institute of Engineering 243 G. T. Road (North), Liluah, Howrah 711204.</p>
+                        <p>TELEPHONE: +91 33 2654 9315 / 17</p>
+                        <p>EMAIL: info@mckvie.edu.in</p>
+                    </div>
+                </div>
+                <hr class="last_hr">
+            </section>
+        </div>
+    </footer>
+    <button id="myBtn" onclick="topFunction()">
+        ^
+    </button>
 </body>
 </html>
