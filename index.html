@@ -1,35 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> -->
+    <script src="https://kit.fontawesome.com/f86723882e.js"></script>
+    <!-- <script
+      src="https://kit.fontawesome.com/869e18f533.js"
+      crossorigin="anonymous"
+    ></script> -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="favicon" href="" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Landy</title>
-</head>
+  </head>
 
-<body>
+  <body onload="myfunc()">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="navbar-nav">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Rides</a>
-                <a class="nav-link" href="#">About</a>
-                <a class="nav-link" href="#">FAQ</a>
-            </div>
-            <button class="btn">Sign up</button>
+<div class="loader" id="loading">
+      <div class="ring"></div>
+      <span>loading...</span>
+    </div>
+    <div class="scroll-up-button" id="scroll-btn">
+      <a href="/"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+    <nav class="navbar" id="navbarId">
+      <div class="container" id="contains">
+        <div class="logo">
+          <a href="/"><img src="./assets/Landy (1).png" class="logo-img" /></a>
         </div>
+        <ul class="menu" id="menuId">
+          <li><a href="/" onclick="hidemenu()">Home</a></li>
+          <li><a href="#about" onclick="hidemenu()">About</a></li>
+          <li><a href="#rides" onclick="hidemenu()">Rides</a></li>
+          <li><a href="#faq" onclick="hidemenu()">FAQ</a></li>
+          <li><a href="#blog" onclick="hidemenu()">Blogs</a></li>
+        </ul>
+        <div class="btn">Sign Up</div>
+        <div class="menu-btn" onclick="showmenu()">
+          <i class="fa-solid fa-bars" id="menubar"></i>
+        </div>
+      </div>
     </nav>
     <!-- Content  -->
-    <div class="content">
-        <div><h3>Explore Excited Rides and Adventures</h3></div>
-        <img src="assets/blob.svg" class="blob" height="450px" width="600px" alt="">
-    </div>
+    <section id="content" class="content">
+      <video
+        src="./assets/Theme Park Cinematic 2020 - ParkSpill Supercut [j8AUaf43kgI] (online-video-cutter.com).mp4"
+        muted
+        loop
+        autoplay
+      ></video>
+      <div class="container">
+        <div class="txt-content">
+          <h1>Explore <span>Excited</span> Rides and <br />Adventures</h1>
+          <h3>Welcome to the biggest Amusement Park</h3>
+          <p style="color: white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            veritatis neque alias,<br />
+            qui quam itaque aspernatur corporis
+          </p>
+          <div class="btn">Take A Tour</div>
+        </div>
+      </div>
+    </section>
+    <!-- about-section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="title">About Us</h2>
+        <div class="about-content">
+          <div class="col-left">
+            <div class="about-text">
+              <h1>The biggest Ammusement Park</h1>
+              <h3>To explore new rides come and enjoy</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Expedita iste vitae deserunt repudiandae magni doloribus, quo
+                perferendis numquam autem nemo molestias dolores asperiores cum
+                deleniti fuga impedit voluptas, magnam atque.
+              </p>
+            </div>
+            <div class="row">
+              <div class="col1">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <div class="description">
+                  <h2>Food & Drinks</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="col1">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <div class="description">
+                  <h2>Attraction</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <div class="description">
+                  <h2>Affordable Price</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="col1">
+                <i class="fa-solid fa-lock"></i>
+                <div class="description">
+                  <h2>Safety lockers</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="col">
+              <div class="up-row"></div>
+              <div class="down-row"></div>
+            </div>
+            <div class="col">
+              <div class="up-row2"></div>
+              <div class="down-row2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end -->
+    <!-- attraction -->
+    <section class="rides" id="rides">
+      <div class="container">
+        <h2 class="title">Attraction</h2>
+        <div class="ride-content">
+          <h1>Explore Landy Rides and Attractions</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="riderows">
+            <div class="ridecol">
+              <img src="./assets/carousel.jpg" />
+              <div class="layer">
+                <h3>Weathering With You</h3>
+              </div>
+            </div>
+            <div class="ridecol">
+              <img src="./assets/hanging carousel.jpg" />
+              <div class="layer">
+                <h3>Your Name</h3>
+              </div>
+            </div>
+            <div class="ridecol">
+              <img src="./assets/merry-go-round.jpg" />
+              <div class="layer">
+                <h3>I Want to eat your Pancreas</h3>
+              </div>
+            </div>
+            <div class="ridecol">
+              <img src="./assets/rollar-coaster.jpg" />
+              <div class="layer">
+                <h3>I Want to eat your Pancreas</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tickets">
+      <div class="container">
+        <h2 class="title">Our tickets Price</h2>
+        <div class="prices">
+          <div class="about-tickets ticket-price">
+            <h3>TICKET PACKAGES</h3>
+            <h1>Choose the best package for you</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            </p>
+            <div class="details">
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+            </div>
+          </div>
+          <div class="primium-tickets ticket-price">
+            <h1>Premium</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              atque voluptatem ea
+            </p>
+            <h2><span>$520</span>/family</h2>
+            <hr>
+            <div class="details">
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+            </div>
+            <div class="btn">Book Now</div>
+          </div>
+          
+          <div class="family-tickets ticket-price">
+            <h1>Family</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              atque voluptatem ea
+            </p>
+            <h2><span>$520</span>/family</h2>
+            <hr color="black">
+            <div class="details">
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-xmark"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+            </div>
+            <div class="btn">Book Now</div>
+          </div>
+          <div class="basic-tickets ticket-price">
+            <h1>Basic</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              atque voluptatem ea
+            </p>
+            <h2><span>$520</span>/family</h2>
+            <hr color="orange">
+            <div class="details">
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-check"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-xmark"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+              <div class="details-row">
+                <i class="fa-solid fa-xmark"></i>
+                <h4>Lorem ipsum dolor sit,</h4>
+              </div>
+            </div>
+            <div class="btn">Book Now</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faq sectio -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="title">Spend an excellent day with your family and friends</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Veritatis sapiente non aperiam incidunt excepturi impedit 
+          eos totam ipsam vitae quo consectetur repellat laboriosam
+           tempora autem officiis quod, et iste error.</p>
+           <div class="faq-content">
+             <div class="general-question">
+               <h1>General question</h1>
+               <div class="question">
 
-</body>
+               
+               <div class="qbox">
+                  <div class="q">
+                    <h1>The park opens at?</h1>
+                    <i class="fa-solid fa-angle-down" id="up-arrow" onclick="change()"></i>
+                    
+                  </div>
+                  <div class="answer" id="answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                       Exercitationem laudantium porro aperiam odit, voluptas doloribus, quam magnam accusantium enim, </div>
+               </div>
+               <div class="qbox">
+                  <div class="q">
+                    <h1>The park opens at?</h1>
+                    <i class="fa-solid fa-angle-down" id="up-arrow2" onclick="change1()"></i>
+                    
+                  </div>
+                  <div class="answer" id="answer2">Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                       Exercitationem laudantium porro aperiam odit, voluptas doloribus, quam magnam accusantium enim, </div>
+               </div>
+               <div class="qbox">
+                  <div class="q">
+                    <h1>The park opens at?</h1>
+                    <i class="fa-solid fa-angle-down" id="up-arrow3" onclick="change2()"></i>
+                    
+                  </div>
+                  <div class="answer" id="answer3">Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                       Exercitationem laudantium porro aperiam odit, voluptas doloribus, quam magnam accusantium enim, </div>
+               </div>
+               <div class="qbox">
+                  <div class="q">
+                    <h1>The park opens at?</h1>
+                    <i class="fa-solid fa-angle-down" id="up-arrow4" onclick="change3()"></i>
+                    
+                  </div>
+                  <div class="answer" id="answer4">Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                       Exercitationem laudantium porro aperiam odit, voluptas doloribus, quam magnam accusantium enim, </div>
+               </div>
+               </div>
+             </div>
+             <div class="support">
+               <div class="rule">
+                 <h1>Rules and regulations</h1>
+                  <div class="rules">
+                    <div class="details-row">
+                      <i class="fa-solid fa-check"></i>
+                      <h4 >Lorem ipsum dolor sit,Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint eligendi, </h4>
+                    </div>
+                    <div class="details-row">
+                      <i class="fa-solid fa-check"></i>
+                      <h4>Lorem ipsum dolor sit,Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint eligendi, </h4>
+                    </div>
+                    <div class="details-row">
+                      <i class="fa-solid fa-check"></i>
+                      <h4>Lorem ipsum dolor sit,Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint eligendi, </h4>
+                    </div>
 
+                 </div>
+               </div>
+               
+               <div class="contact">
+                 <h1>Support</h1>
+                 <div class="content">
+                   <div class="phone">
+                     <i class="fa-solid fa-phone"></i>
+                     <h2 style="margin-right: 70px;">6290399626</h2>
+                   </div>
+                   <div class="phone">
+                     <i class="fa-solid fa-envelope"></i>
+                     <h2 style="margin: 10px;">something@gmail.com</h2>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+      </div>
+    </section>
+    <!-- blog Section -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <div class="title">Moments captured in our place</div>
+        <div class="memory">
+          <div class="images">
+            <div class="up first">
+
+            </div>
+            <div class="down first">
+
+            </div>            
+          </div>
+          <div class="images">
+            <div class="up2">
+
+            </div>
+            <div class="down2">
+
+            </div>
+
+          </div>
+          <div class="images">
+            <div class="up third">
+
+            </div>
+            <div class="down third">
+              
+            </div> 
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="info">
+          <ul>
+            <li>
+              FAQ
+            </li>
+            <li>
+              Terms & condition
+            </li>
+            <li>
+              Rules & regulations
+            </li>
+            <li>
+              Help & support
+            </li>
+          </ul>
+        </div>
+        <div class="landy">
+          <img src="./assets/Landy (1).png" alt="">
+          <h1>The Biggest Amusement and theme park</h1>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright" style="width: 100%; background-color: rgb(1, 1, 15);color: white;text-align: center;"> Created by
+      <a href="https://github.com/ishika-ghosh" target="blank" style="color: #ff8553;"
+        >@ishika-ghosh
+      </a>
+      |©2022 all rights are reserved.</div>
+    <script src="./script.js"></script>
+  </body>
 </html>
