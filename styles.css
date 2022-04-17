@@ -3,10 +3,11 @@
 /* Background Image  */
 body {
     background-image: url('assets/back.jpg');
-    height: 100vh;
-    background-repeat: repeat-y;
+    height: 35vh;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    text-decoration: none;
 } 
 
 
@@ -17,6 +18,7 @@ nav {
     border-radius: 5px;
     height: 5rem;
     background-color: rgba(169, 98, 255, 0.89); 
+    text-decoration: none;
     color: #fff;
 }
 
@@ -26,6 +28,7 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 section{
@@ -39,11 +42,13 @@ section:nth-child(even){
 .heading{
     text-align: center;
     padding-bottom: 0rem;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px rgb(236, 116, 255);
     text-transform: uppercase;
-    color: black
-    font-size: 5rem;
-    letter-spacing: .4rem;
+    color: black;
+    text-decoration: none;
+    /* font-size: 5rem;
+    letter-spacing: .4rem; */
+
 }
 
 .heading span{
@@ -65,6 +70,7 @@ section:nth-child(even){
     font-size: 2rem;
     background: rgb(239, 198, 255);
     color: black;
+    text-decoration: none;
 }
 .btns{
     display: inline-block;
@@ -127,11 +133,13 @@ section:nth-child(even){
     font-size: 1.7rem;
     color: white;
     margin-left: 2rem;
+    text-decoration: none;
 }
 
 .header .navbar a:hover{
     color: blue;
     font-size: 2rem;
+
 }
 
 #menu-btn{
@@ -153,10 +161,12 @@ section:nth-child(even){
     flex-wrap: wrap;
     gap:.5rem;
     padding-top: 10rem;
+    padding: 4rem;
 }
 
 .home .image{
-    flex:1 1 45rem;
+    flex:1 1 60rem;
+    
 }
 
 .home .image img{
@@ -195,51 +205,59 @@ section:nth-child(even){
     border-radius: .5rem;
     text-align: center;
     padding: 2.5rem;
+    box-shadow: 80px 8px 80px rgba(2, 1, 1, 0.918);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(251, 21, 255));
 }
 
 .icons-container .icons i{
     font-size: 4.5rem;
-    color:black;
+    color:rgba(255, 255, 255, 0.938);
     padding-bottom: .7rem;
 }
 
 .icons-container .icons h3{
     font-size: 4.5rem;
-    color:black;
+    color:rgb(255, 255, 255);
     padding: .5rem 0;
-    text-shadow: .1px .1px;
+    text-shadow: 2px 2px 80px rgb(85, 23, 255);
+
 }
 
 .icons-container .icons p{
     font-size: 1.7rem;
-    color:black;
+    color:rgb(0, 0, 0);
     font-weight: bold;
+    text-shadow: 80px 80px 80px rgb(85, 23, 255);
 }
 
 .services .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:2rem;
 }
 
 .services .box-container .box{
-    background:#fff;
+    background-image: url('assets/download.jpg');
     border-radius: 9rem;
-    box-shadow: 5px 2px;
+    box-shadow: 2px 2px 80px rgb(0, 0, 0);
+
     /* border: 2px solid; */
     padding: 2.5rem;
+
 }
 
 .services .box-container .box i{
-    color: black;
+    color: rgb(206, 201, 201);
     font-size: 5rem;
     padding-bottom: .5rem;
 }
 
 .services .box-container .box h3{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     padding:1rem 0;
+    text-shadow: 2px 2px 50px rgb(255, 255, 255);
+
 }
 
 .services .box-container .box p{
@@ -261,6 +279,7 @@ section:nth-child(even){
 
 .about .row .image img{
     width: 100%;
+    /* height: min-content; */
 }
 
 .about .row .content{
@@ -269,7 +288,7 @@ section:nth-child(even){
 
 .about .row .content h3{
     color: black;
-    text-shadow: 2px 2px 8px #f062e0;
+    text-shadow: 2px 2px 40px #0000ff;
     font-size: 4rem;
     line-height: 1.8;
 }
@@ -277,8 +296,9 @@ section:nth-child(even){
 .about .row .content p{
     color:black;
     padding:1rem 0;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     line-height: 1.8;
+    font-weight: bold;
 }
 
 .doctors .box-container{
@@ -292,14 +312,15 @@ section:nth-child(even){
     background:#fff;
     border-radius: .5rem;
     border:1px solid;
-    box-shadow: 2px 3px black;
+    box-shadow: 2px 2px 100px rgb(0, 0, 0);
+
     padding:2rem;
 }
 
 .doctors .box-container .box img{
     height: 20rem;
     border:.5rem solid;
-    border-radius: 10rem;
+    border-radius: 5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -319,7 +340,7 @@ section:nth-child(even){
     padding-top: 2rem;
 }
 
-.doctors .box-container .box . a{
+.doctors .box-container .box .a{
     height: 5rem;
     width: 5rem;
     line-height: 4.5rem;
@@ -353,12 +374,12 @@ section:nth-child(even){
 
 .book .row form{
     flex:1 1 45rem;
-    background: #fff;
+    /* background:  url('ferris-wheel-amusement-ride.gif'); */
     /* border:.2rem solid; */
-    box-shadow: 2px 2px 100px #ff9eff;
+    box-shadow: 2px 2px 200px #0a000a;
     text-align: center;
     padding: 2rem;
-    border-radius: 5rem;
+    border-radius: 3rem;
 }
 
 .book .row form h3{
