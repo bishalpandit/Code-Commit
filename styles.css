@@ -1,19 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
 /* Background Image  */
 body {
     background-image: url('assets/back.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 500px;
     background-position: center center;
+}
+body .max-width{
+    margin: auto 0 auto 40px;
 }
 
 /* Navbar */
 nav {
     border-radius: 5px;
     height: 5rem;
-    background-color: rgb(145, 107, 191,0.89); 
+    background-color: rgba(120, 83, 164, 0.89); 
     color: #fff;
 }
 
@@ -25,7 +42,12 @@ nav {
     margin-left: 3.5rem;
     font-weight: 550;
 }
-
+.menu-btn{
+    color: #fff;
+    font-size: 27px;
+    cursor: pointer;
+    display: none;
+}
 .btn {
     -webkit-border-radius: 16;
     -moz-border-radius: 16;
@@ -56,4 +78,323 @@ nav {
     left: 13%;
     width: 300px;
     line-height: 4.5rem;
+}
+/*all section styling*/
+section{
+    padding: 100px 0;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu',sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/*about section styling*/
+.Rides {
+    font-family: 'Poppins',sans-serif;
+    padding: 340px 0 20px 0;
+}
+.Rides .Rides-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.Rides .Rides-content .left{
+    width: 45%;
+}
+.Rides .Rides-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.Rides .Rides-content .right{
+    width: 55%;
+}
+.Rides .Rides-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.Rides .Rides-content .right .text span{
+    color: crimson;
+}
+.Rides.Rides-content .right p{
+    text-align: justify;
+}
+.Rides .Rides-content .right a{
+    display: inline-block;
+    background: rgb(238, 8, 54);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.Rides .Rides-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/*about section styling*/
+.about {
+    font-family: 'Poppins',sans-serif;
+}
+.about .title::after{
+  content: "US";
+}
+.about .about-content , .services .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(238, 8, 54);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+/*Footer*/
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    margin-left: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 30px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*responsive media query start*/
+@media (max-width: 1300px){
+    .content .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px){
+     .about .about-content .left img{
+         height: 350px;
+         width: 350px;
+     }
+     .Rides .Rides-content .left img{
+        height: 350px;
+        width: 350px;
+     }
+    }
+@media (max-width: 991px){
+}
+
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .navbar-nav{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    .navbar .navbar-nav.active{
+        left: 0;
+    }
+    .navbar .navbar-nav li{
+        display: block;
+    }
+    .navbar .navbar-nav li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+  
+    .about.about-content .column{
+        width: 100%;
+    }
+    .about .about-content.left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+
+    .Rides.RIdes-content .column{
+        width: 100%;
+    }
+    .Rides.RIdes-content.left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .Rides .Rides-content .right{
+        flex: 100%;
+    }
+   .footer-col{
+       width: 50%;
+       margin-bottom: 30px;
+   }
+
+}
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+
 }
